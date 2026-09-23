@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(0.85);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(-20px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-45px) scale(0.9);
+  }
+}
+
+@keyframes purrVibe {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-1px) scale(1.01, 0.99);
+  }
+  50% {
+    transform: translateY(1px) scale(0.99, 1.01);
+  }
+  75% {
+    transform: translateY(-0.5px) scale(1.005, 0.995);
+  }
+}
+
+@keyframes tailWag {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(12deg);
+  }
+  75% {
+    transform: rotate(-14deg);
+  }
+}
+
+@keyframes softBreathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015, 1.025);
+  }
+}
+
+@keyframes earTwitchLeft {
+  0%, 90%, 100% {
+    transform: rotate(0deg);
+  }
+  93% {
+    transform: rotate(-8deg);
+  }
+  96% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes earTwitchRight {
+  0%, 88%, 100% {
+    transform: rotate(0deg);
+  }
+  92% {
+    transform: rotate(8deg);
+  }
+  95% {
+    transform: rotate(-4deg);
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 1.4s ease-out forwards;
+}
+
+.animate-purr {
+  animation: purrVibe 0.25s infinite ease-in-out;
+}
+
+.animate-breathe {
+  animation: softBreathe 3.5s infinite ease-in-out;
+}
+
+.animate-tail {
+  animation: tailWag 2.4s infinite ease-in-out;
+  transform-origin: bottom left;
+}
+
+.animate-ear-left {
+  animation: earTwitchLeft 4.5s infinite ease-in-out;
+  transform-origin: bottom right;
+}
+
+.animate-ear-right {
+  animation: earTwitchRight 5.2s infinite ease-in-out;
+  transform-origin: bottom left;
+}
+
+/* Custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(245, 238, 226, 0.6);
+  border-radius: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(214, 188, 160, 0.7);
+  border-radius: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 150, 118, 0.9);
+}

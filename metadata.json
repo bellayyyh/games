@@ -1,0 +1,6 @@
+{
+  "name": "Mini Block World",
+  "description": "An interactive 3D Minecraft-inspired voxel sandbox game. Explore, mine blocks, craft tools, build shelters, and survive night creatures!",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
